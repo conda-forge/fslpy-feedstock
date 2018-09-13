@@ -24,9 +24,8 @@ build:
     - extract_noise = fsl.scripts.extract_noise:main
 
 requirements:
-  host:
+  build:
     - python
-    - numpy
   run:
     - python
     - deprecation >=1.*,<=2.*
