@@ -26,6 +26,9 @@ build:
 requirements:
   build:
     - python
+  host:
+    - python
+    - numpy
   run:
     - python
     - deprecation >=1.*,<=2.*
