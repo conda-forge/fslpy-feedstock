@@ -56,7 +56,7 @@ test:
     - trimesh >= 2.22.28,<3
     - rtree 0.8.3
     - indexed_gzip >=0.7,<1.*
-    - dcm2niix 1.0.20171215
+    - dcm2niix 1.0.20180622
   commands:
     - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest)"
 
