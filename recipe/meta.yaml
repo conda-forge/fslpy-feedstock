@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - immv          = fsl.scripts.immv:main
@@ -44,6 +44,7 @@ requirements:
     - wxpython <4.1
     - trimesh >=2.22.28,<3
     - rtree 0.8.3
+    - dcm2niix 1.0.20180622
 
 test:
   source_files:
