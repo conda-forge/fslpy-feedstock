@@ -44,6 +44,7 @@ requirements:
     - wxpython <4.1
     - trimesh >=2.22.28,<3
     - rtree 0.8.3
+    - dcm2niix 1.0.20180622
 
 test:
   source_files:
