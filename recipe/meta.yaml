@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "1.13.2" %}
-{% set sha256 = "74640bc9bfa2c5f894070b0637ef5a9269f8ab872f2a6eb8eb18fdfc897f5a7f" %}
+{% set version = "1.13.3" %}
+{% set sha256 = "5ce99418d2731eb1ff17c92550bf067b337730926c01f671030b7f04c87cbcc0" %}
 
 package:
   name: {{ name|lower }}
