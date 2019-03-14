@@ -35,6 +35,7 @@ requirements:
     - scipy >=0.18
     - nibabel 2.*
     - six 1.*
+  run_constrained:
     - indexed_gzip >=0.7
     - wxpython >=4
     - trimesh >=2.22.28
@@ -54,7 +55,7 @@ test:
     - indexed_gzip >=0.7
     - dcm2niix
   commands:
-    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest)"
+    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest)" tests
 
 
 about:
