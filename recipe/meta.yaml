@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "5cf12a0230f817f688079c1a1168e310cb4fb4b863b23b51b7fd57ef62457157" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "848208a17b7f88a0d3971b0fe5c9e6dfbb674e33b87db1277419b6b15fec24bf" %}
 
 package:
   name: {{ name|lower }}
@@ -15,13 +15,14 @@ build:
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
-    - immv          = fsl.scripts.immv:main
-    - imcp          = fsl.scripts.imcp:main
-    - imglob        = fsl.scripts.imglob:main
-    - atlasq        = fsl.scripts.atlasq:main
-    - atlasquery    = fsl.scripts.atlasq:atlasquery_emulation
-    - extract_noise = fsl.scripts.extract_noise:main
-    - fsl_ents      = fsl.scripts.fsl_ents:main
+    - immv           = fsl.scripts.immv:main
+    - imcp           = fsl.scripts.imcp:main
+    - imglob         = fsl.scripts.imglob:main
+    - atlasq         = fsl.scripts.atlasq:main
+    - atlasquery     = fsl.scripts.atlasq:atlasquery_emulation
+    - extract_noise  = fsl.scripts.extract_noise:main
+    - fsl_ents       = fsl.scripts.fsl_ents:main
+    - resample_image = fsl.scripts.resample_image:main
 
 requirements:
   host:
@@ -45,10 +46,10 @@ test:
   source_files:
     - tests
   requires:
-    - mock 2.*
-    - coverage 4.*
-    - pytest 3.*
-    - pytest-cov 2.*
+    - mock
+    - coverage
+    - pytest
+    - pytest-cov
     - trimesh >=2.37.29
     - rtree 0.8.3.*
     - indexed_gzip >=0.7
