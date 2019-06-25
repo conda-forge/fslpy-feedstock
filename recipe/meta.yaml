@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "2.2.0" %}
-{% set sha256 = "848208a17b7f88a0d3971b0fe5c9e6dfbb674e33b87db1277419b6b15fec24bf" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "cb55ff1e17dfca9c85fe46909f186914c021fcb4a3dc8367ab9be58ba7c2a36f" %}
 
 package:
   name: {{ name|lower }}
@@ -41,6 +41,7 @@ requirements:
     - trimesh >=2.37.29
     - rtree 0.8.3.*
     - dcm2niix 1.0.20181114
+    - pillow >=3.2.0
 
 test:
   source_files:
@@ -54,6 +55,7 @@ test:
     - rtree 0.8.3.*
     - indexed_gzip >=0.7
     - dcm2niix 1.0.20181114
+    - pillow >=3.2.0
   commands:
     - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest)" tests
 
