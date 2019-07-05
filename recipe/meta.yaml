@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "2.3.0" %}
-{% set sha256 = "cb55ff1e17dfca9c85fe46909f186914c021fcb4a3dc8367ab9be58ba7c2a36f" %}
+{% set version = "2.3.1" %}
+{% set sha256 = "2d0f44aa202e9d6d1871afe5599f7f5ad7bd59f013148787dcf776f7a554552b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - immv           = fsl.scripts.immv:main
