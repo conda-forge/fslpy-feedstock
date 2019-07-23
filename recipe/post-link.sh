@@ -6,6 +6,5 @@ if [ -e ${FSLDIR}/etc/fslconf/requestFSLpythonLink.sh ]; then
     atlasq        \
     atlasquery    \
     extract_noise \
-    fsl_ents      \
-    resample_image
+    fsl_ents
 fi
