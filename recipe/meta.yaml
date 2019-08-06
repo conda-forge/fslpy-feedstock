@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "2.4.0" %}
-{% set sha256 = "0d45a235b91805651d7fc148a8d901e1f1745295ca30c32b8181fb6da0cc8dec" %}
+{% set version = "2.5.0" %}
+{% set sha256 = "858bb856559cab0245c78c189c002e3421fd0f7856697602ca0ae95d10172336" %}
 
 package:
   name: {{ name|lower }}
@@ -20,9 +20,10 @@ build:
     - imglob         = fsl.scripts.imglob:main
     - atlasq         = fsl.scripts.atlasq:main
     - atlasquery     = fsl.scripts.atlasq:atlasquery_emulation
-    - extract_noise  = fsl.scripts.extract_noise:main
     - fsl_ents       = fsl.scripts.fsl_ents:main
     - resample_image = fsl.scripts.resample_image:main
+    - fsl_apply_x5   = fsl.scripts.fsl_apply_x5:main
+    - fsl_convert_x5 = fsl.scripts.fsl_convert_x5:main
 
 requirements:
   host:
