@@ -1,5 +1,5 @@
 diff --git a/tests/test_dicom.py b/tests/test_dicom.py
-index e3b444c3..a198fe3c 100644
+index e3b444c3..93ec12fe 100644
 --- a/tests/test_dicom.py
 +++ b/tests/test_dicom.py
 @@ -30,30 +30,11 @@ pytestmark = pytest.mark.dicomtest
@@ -31,10 +31,21 @@ index e3b444c3..a198fe3c 100644
 -            finally:
 -                fsldcm.installedVersion.invalidate()
 +    try:
-+        sp.call('conda install dcm2niix={}'.format(version))
++        sp.call('conda install -c conda-forge dcm2niix={}'.format(version).split())
 +        yield
 +    finally:
 +        fsldcm.installedVersion.invalidate()
  
  
  def test_disabled():
+@@ -68,8 +49,8 @@ def test_disabled():
+ def test_installedVersion():
+     tests = [
+         ('1.0.20190902', (1, 0, 2019, 9, 2)),
+-        ('1.0.20181125', (1, 0, 2018, 11, 25)),
+-        ('1.0.20171017', (1, 0, 2017, 10, 17))]
++        ('1.0.20181114', (1, 0, 2018, 11, 14)),
++        ('1.0.20171215', (1, 0, 2017, 12, 15))]
+ 
+     for version, expect in tests:
+         fsldcm.installedVersion.invalidate()
