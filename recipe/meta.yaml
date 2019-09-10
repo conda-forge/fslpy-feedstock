@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "2.5.0" %}
-{% set sha256 = "858bb856559cab0245c78c189c002e3421fd0f7856697602ca0ae95d10172336" %}
+{% set version = "2.6.0" %}
+{% set sha256 = "5d788de54cc919d04d2a7e3af22a2aed823433e1bf94691c539450d255e2af33" %}
 
 package:
   name: {{ name|lower }}
@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - test_dicom.py.patch
 
 build:
   noarch: python
@@ -27,21 +29,22 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
     - numpy
   run:
-    - python
+    - python >=3.5
     - {{ pin_compatible('numpy') }}
     - scipy >=0.18
     - nibabel >=2.3.1
     - six 1.*
+    - h5py >=2.9
   run_constrained:
     - indexed_gzip >=0.7
     - wxpython >=4
     - trimesh >=2.37.29
     - rtree 0.8.3.*
-    - dcm2niix 1.0.20181114
+    - dcm2niix >=1.0.20171215
     - pillow >=3.2.0
 
 test:
@@ -55,7 +58,7 @@ test:
     - trimesh >=2.37.29
     - rtree 0.8.3.*
     - indexed_gzip >=0.7
-    - dcm2niix 1.0.20181114
+    - dcm2niix >=1.0.20171215
     - pillow >=3.2.0
   commands:
     - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest)" tests
