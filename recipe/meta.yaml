@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "2.8.4" %}
-{% set sha256 = "2db554d9f54440c4b07aace0c440e8448d61c7b888c304f107b462d27b1f369e" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "7a9615f1ccc310ea38b8fb8c5448efa3cf089c897e8c265c3d7128095534608d" %}
 
 package:
   name: {{ name|lower }}
@@ -29,11 +29,11 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - pip
     - numpy
   run:
-    - python >=3.5
+    - python >=3.7
     - {{ pin_compatible('numpy') }}
     - scipy >=0.18
     - nibabel >=2.3.1
@@ -61,7 +61,7 @@ test:
     - dcm2niix >=1.0.20171215
     - pillow >=3.2.0
   commands:
-    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest)" tests
+    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest)" -k "not (fslsub or fslstats)" tests
 
 
 about:
