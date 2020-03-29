@@ -61,7 +61,7 @@ test:
     - dcm2niix >=1.0.20171215
     - pillow >=3.2.0
   commands:
-    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest)" -k "not fslsub" tests
+    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest)" -k "not (fslsub or fslstats)" tests
 
 
 about:
