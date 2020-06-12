@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "3.1.0" %}
-{% set sha256 = "34bb17cc0256eee0ea4c2b8dda40b7fe69c0fd15ed9e9a5d33fecdc74fc29843" %}
+{% set version = "3.2.0" %}
+{% set sha256 = "af285425e79582438ee5bc27f8f7f1e5d685e230f762c67f4cf221a183781bbd" %}
 
 package:
   name: {{ name|lower }}
@@ -29,16 +29,17 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.6
     - pip
     - numpy
   run:
-    - python >=3.7
+    - python >=3.6
     - {{ pin_compatible('numpy') }}
     - scipy >=0.18
     - nibabel >=2.4
-    - six 1.*
+    - six >=1.*
     - h5py >=2.9
+    - dataclasses  # [py<37]
   run_constrained:
     - indexed_gzip >=0.7
     - wxpython >=4
