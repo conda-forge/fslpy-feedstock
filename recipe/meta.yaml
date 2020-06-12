@@ -39,7 +39,7 @@ requirements:
     - nibabel >=2.4
     - six >=1.*
     - h5py >=2.9
-    - dataclasses  # [py<37]
+    - dataclasses
   run_constrained:
     - indexed_gzip >=0.7
     - wxpython >=4
