@@ -1,14 +1,14 @@
 diff --git a/tests/test_dicom.py b/tests/test_dicom.py
-index e3b444c3..93ec12fe 100644
+index dba678f4..d5c2836c 100644
 --- a/tests/test_dicom.py
 +++ b/tests/test_dicom.py
 @@ -30,30 +30,11 @@ pytestmark = pytest.mark.dicomtest
  
  @contextlib.contextmanager
- def install_dcm2niix(version='1.0.20190902'):
+ def install_dcm2niix(version='1.0.20201102'):
 -    filenames = {
+-        '1.0.20201102' : 'v1.0.20201102/dcm2niix_lnx.zip',
 -        '1.0.20190902' : 'v1.0.20190902/dcm2niix_lnx.zip',
--        '1.0.20190410' : 'v1.0.20190410/dcm2niix_11-Apr-2019_lnx.zip',
 -        '1.0.20181125' : 'v1.0.20181125/dcm2niix_25-Nov-2018_lnx.zip',
 -        '1.0.20171017' : 'v1.0.20171017/dcm2niix_18-Oct-2017_lnx.zip',
 -    }
