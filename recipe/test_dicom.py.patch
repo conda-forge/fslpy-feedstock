@@ -1,5 +1,5 @@
 diff --git a/tests/test_dicom.py b/tests/test_dicom.py
-index dba678f4..d5c2836c 100644
+index 50dc56e8..3e7c64c5 100644
 --- a/tests/test_dicom.py
 +++ b/tests/test_dicom.py
 @@ -30,30 +30,11 @@ pytestmark = pytest.mark.dicomtest
@@ -49,3 +49,13 @@ index dba678f4..d5c2836c 100644
  
      for version, expect in tests:
          fsldcm.installedVersion.invalidate()
+@@ -189,7 +170,8 @@ def test_loadSeries():
+                     assert 'PatientName'                      in img.metaKeys()
+                     assert 'MCCARTHY_PAUL'                    in img.metaValues() or \
+                            'MCCARTHY^PAUL'                    in img.metaValues() or \
+-                           'MCCARTHY_PAUL_2'                  in img.metaValues()
++                           'MCCARTHY_PAUL_2'                  in img.metaValues() or \
++                           'MCCARTHY^PAUL^2'                  in img.metaValues()
+                     assert ('PatientName', 'MCCARTHY_PAUL')   in img.metaItems() or \
+                            ('PatientName', 'MCCARTHY^PAUL')   in img.metaItems() or \
+                            ('PatientName', 'MCCARTHY_PAUL_2') in img.metaItems() or \
