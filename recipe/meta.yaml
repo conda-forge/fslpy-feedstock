@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "3.5.1" %}
-{% set sha256 = "d68ca13af1c39dca21cd98397c6e7167354f6610ef1910389af6c3fda9274f6d" %}
+{% set version = "3.5.3" %}
+{% set sha256 = "f80ef8b7b49f475bfb71946619d33c118a7cbbe106c72f7777aaf14d9e261530" %}
 
 package:
   name: {{ name|lower }}
@@ -9,8 +9,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - test_dicom.py.patch
 
 build:
   noarch: python
