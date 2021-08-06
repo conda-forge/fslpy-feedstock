@@ -12,13 +12,13 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - imcp           = fsl.scripts.imcp:main
     - imln           = fsl.scripts.imln:main
     - immv           = fsl.scripts.immv:main
-    - imrm           = fsl.scripts.immv:main
+    - imrm           = fsl.scripts.imrm:main
     - imglob         = fsl.scripts.imglob:main
     - imtest         = fsl.scripts.imtest:main
     - remove_ext     = fsl.scripts.remove_ext:main
