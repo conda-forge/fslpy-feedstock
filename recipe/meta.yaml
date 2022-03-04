@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - imcp           = fsl.scripts.imcp:main
@@ -36,10 +36,9 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - numpy
   run:
     - python >=3.7
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.18
     - scipy >=0.18
     - nibabel >=2.4
     - h5py >=2.9
@@ -47,7 +46,7 @@ requirements:
     - indexed_gzip >=0.7
     - wxpython >=4
     - trimesh >=2.37.29
-    - rtree >=0.8.3.*
+    - rtree >=0.8.3
     - dcm2niix >=1.0.20171215
     - pillow >=3.2.0
 
