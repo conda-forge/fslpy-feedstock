@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "3.13.3" %}
-{% set sha256 = "09b2155f1f72d9902f863f58eee893997a3e592d518e24d6acb3e897a39478cb" %}
+{% set version = "3.14.0" %}
+{% set sha256 = "9b1691059918a7299662dc464a91f1d13ea60f3af5cbd631f7545a6bddb90780" %}
 
 package:
   name: {{ name|lower }}
@@ -53,7 +53,8 @@ requirements:
 
 test:
   source_files:
-    - tests
+    - conftest.py
+    - fsl/tests
   requires:
     - mock
     - coverage
@@ -65,7 +66,7 @@ test:
     - dcm2niix >=1.0.20171215
     - pillow >=3.2.0
   commands:
-    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest or dicomtest)" -k "not (fslsub or fslstats)" tests
+    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest or dicomtest)" -k "not (fslsub or fslstats)" fsl/tests
 
 
 about:
