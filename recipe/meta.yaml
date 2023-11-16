@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "3.15.2" %}
-{% set sha256 = "e80f079214e4ec64aa0bf95d998f1522974f55c7e138f70bcb9080bf98ab53fe" %}
+{% set version = "3.15.3" %}
+{% set sha256 = "40b75597e787cd7188d3ae4e47ef6a90346a36167a7b0cdde8dfa73c07cca2a4" %}
 
 package:
   name: {{ name|lower }}
@@ -34,10 +34,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - numpy >=1.18
     - scipy >=0.18
     - nibabel >=2.4
