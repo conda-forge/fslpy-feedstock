@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "3.21.0" %}
-{% set sha256 = "5f06571d97979fa14b13c882ff9b9371c8f58b64a69c368f5077173c26cf90e5" %}
+{% set version = "3.21.1" %}
+{% set sha256 = "c23c965d133a4bc1a254c30b52e9da84316bdfc4d366aacb785eb129c7c12762" %}
 
 package:
   name: {{ name|lower }}
@@ -36,6 +36,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools
   run:
     - python >=3.8
     - numpy >=1.18
