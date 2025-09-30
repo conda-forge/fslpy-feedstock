@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "3.23.0" %}
-{% set sha256 = "94aa05e84382c2c27c67318233cc34b9d843d36f79d48b88557c19eddbd26eef" %}
+{% set version = "3.24.0" %}
+{% set sha256 = "77da23f5fcdc3de98d6c479cdd0885607c9b12d1995b87e114525417536163d3" %}
 
 package:
   name: {{ name|lower }}
@@ -37,6 +37,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - setuptools-scm
   run:
     - python >={{ python_min }}
     - numpy >=1.18
