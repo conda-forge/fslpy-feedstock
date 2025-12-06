@@ -1,6 +1,6 @@
 {% set name = "fslpy" %}
-{% set version = "3.25.1" %}
-{% set sha256 = "635fab06b71295be233c051705701ae7d43d41c28690f77f220f47ba18fb9d0c" %}
+{% set version = "3.26.0" %}
+{% set sha256 = "48e70a55b3f0bf737078f0a06060a9c760790d048b0ffc4623d108c90e6082e8" %}
 
 package:
   name: {{ name|lower }}
@@ -71,7 +71,7 @@ test:
     - python {{ python_min }}
     - pyzstd
   commands:
-    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest or dicomtest)" -k "not (fslsub or fslstats)" fsl/tests
+    - pytest -x -v --cov=fsl -m "not (wxtest or unixtest or longtest or fsltest or noroottest or dicomtest or mrstest)" -k "not (fslsub or fslstats)" fsl/tests
 
 
 about:
