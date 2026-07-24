@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
  name:       fslpy
- version:    3.29.0
- sha256:     0d99d555a234a58ae5b2942293b3e5f18887378d1d6614458313ee8fb4b5b267
+ version:    3.29.1
+ sha256:     7d406171c8928a5e6db6d21e6effb90fc4a0c28e904a084095e37c97fd755431
  python_min: "3.11"
 
 package:
