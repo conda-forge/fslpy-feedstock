@@ -16,8 +16,7 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  number: 1
   python:
     entry_points:
       - Text2Vest      = fsl.scripts.Text2Vest:main
